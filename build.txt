@@ -1,0 +1,3 @@
+displayName = Find My NPCs
+author = Erky
+version = 0.1
