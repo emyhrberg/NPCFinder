@@ -1,1 +1,10 @@
-Modify this file with a description of your mod.
+This mod finds your NPCs easily with a chat command /find <npcname>.
+
+It will draw an arrow to the NPC along with the distance and the NPCs icon.
+
+There are config settings to enable or disable arrows and to set the name type of the NPCs you find.
+
+This is how it works:
+
+[video mp4=https://i.imgur.com/jpAbdf1.mp4]
+[/video]

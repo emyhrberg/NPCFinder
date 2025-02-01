@@ -1,1 +1,16 @@
-Configs.Config.DisplayName: Config
+Configs: {
+	Config: {
+		DrawArrow: {
+			Tooltip: Draw an arrow to the selected NPC.
+			Label: Draw Arrow
+		}
+
+		NPCNameFormat: {
+			Tooltip: Choose the format of the NPC name, e.g Full Name: Amy the Nurse, Short Name: Amy, Type Name: Nurse.
+			Label: NPC Name Format
+		}
+
+		DisplayName: Config
+		Headers.Config: Config Header
+	}
+}
