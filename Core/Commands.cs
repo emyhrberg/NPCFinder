@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using System;
+using System.Linq;
 
 namespace FindMyNPCs.Core
 {
@@ -52,19 +53,22 @@ namespace FindMyNPCs.Core
             // NPC found! Add UI arrow to NPC
             // Set the NPC target in ArrowSystem
             arrowSystem.SetTargetNPC(foundNPC);
-            Main.NewText($"Arrow set to NPC: {foundNPC.FullName}. Use /find to disable the arrow.", Color.Yellow);
         }
 
         private static void PrintAllNPCs()
         {
             Main.NewText("Available NPCs:", Color.Yellow);
 
-            foreach (NPC npc in Main.npc)
+            // Filter and sort the active town NPCs (excluding the Old Man) by TypeName
+            var validNPCs = Main.npc
+                .Where(npc => npc.active && npc.townNPC && npc.type != NPCID.OldMan)
+                .OrderBy(npc => npc.TypeName)
+                .ToList();
+
+            // Print each NPC with the desired formatting
+            foreach (NPC npc in validNPCs)
             {
-                if (npc.active && npc.townNPC && npc.type != NPCID.OldMan)
-                {
-                    Main.NewText($"/find {npc.TypeName.ToLower()} ([c/FFF014:{npc.FullName}])");
-                }
+                Main.NewText($"/find {npc.TypeName.ToLower()} ([c/FFF014:{npc.FullName}])");
             }
         }
     }

@@ -1,16 +1,21 @@
 Configs: {
 	Config: {
-		DrawArrow: {
-			Tooltip: Draw an arrow to the selected NPC.
-			Label: Draw Arrow
+		KeepShowingNPCAfterFound: {
+			Tooltip: If the player is within 10 tiles of the NPC, should the target NPC continue to be tracked?
+			Label: Keep Showing NPC After Found
+		}
+
+		DisableArrow: {
+			Tooltip: Should the arrow be disabled?
+			Label: Disable Arrow
 		}
 
 		NPCNameFormat: {
-			Tooltip: Choose the format of the NPC name, e.g Full Name: Amy the Nurse, Short Name: Amy, Type Name: Nurse.
+			Tooltip: How should the NPC name be displayed? Full = 'Andrew the Guide', Given = 'Andrew', Type = 'Guide'
 			Label: NPC Name Format
 		}
 
+		Headers.Config: Find My NPCs Config
 		DisplayName: Config
-		Headers.Config: Config Header
 	}
 }

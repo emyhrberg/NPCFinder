@@ -10,23 +10,27 @@ namespace FindMyNPCs.Core
         public override ConfigScope Mode => ConfigScope.ClientSide;
 
         // Config ideas:
-        // 1 Include town slimes
-        // 2 Full name, short name, type name
-        // 3 Draw arrow
+        // 1. Include town slimes
+        // 2. Full Name, Short Name, or Type Name for NPC display
+        // 3. Draw arrow
 
         [Header("Config")]
 
-        [Label("NPC Name Format")]
-        [Tooltip("Choose the format of the NPC name, e.g " +
-            "Full Name: Amy the Nurse, Short Name: Amy, Type Name: Nurse.")]
         [DrawTicks]
-        [OptionStrings(["Full Name", "Short Name", "Type Name"])]
+        [OptionStrings(["Full Name", "Given Name", "Type Name"])]
         [DefaultValue("Type Name")]
+        [Tooltip("How should the NPC name be displayed? Full = 'Andrew the Guide', Given = 'Andrew', Type = 'Guide'")]
         public string NPCNameFormat;
 
-        [Label("Draw Arrow")]
-        [Tooltip("Draw an arrow to the selected NPC.")]
-        [DefaultValue(true)]
-        public bool DrawArrow { get; set; }
+        [DefaultValue(false)]
+        [Tooltip("Should the arrow be disabled?")]
+        public bool DisableArrow { get; set; }
+
+        // If the player is within 10 tiles (approximately 10ft) of the NPC,
+        // this option determines whether or not the target NPC should continue to be tracked.
+        // When false (default), the target NPC is removed once the player gets close.
+        [Tooltip("If the player is within 10 tiles of the NPC, should the target NPC continue to be tracked?")]
+        [DefaultValue(false)]
+        public bool KeepShowingNPCAfterFound { get; set; }
     }
 }
