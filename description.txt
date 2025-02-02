@@ -1,10 +1,3 @@
-This mod finds your NPCs easily with a chat command /find <npcname>.
+Type /find in chat to show directions to town NPCs.
 
-It will draw an arrow to the NPC along with the distance and the NPCs icon.
-
-There are config settings to enable or disable arrows and to set the name type of the NPCs you find.
-
-This is how it works:
-
-[video mp4=https://i.imgur.com/jpAbdf1.mp4]
-[/video]
+This mod draws an arrow pointing to the NPC and displays the NPC's name, head icon, and distance (similar to a how a teammate is displayed).
