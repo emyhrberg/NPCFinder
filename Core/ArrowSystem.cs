@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI;
 
-namespace FindMyNPCs.Core
+namespace NPCFinder.Core
 {
     public class ArrowSystem : ModSystem
     {
@@ -24,7 +24,7 @@ namespace FindMyNPCs.Core
 
         public override void Load()
         {
-            _arrowTexture = ModContent.Request<Texture2D>("FindMyNPCs/Assets/Arrow", AssetRequestMode.ImmediateLoad).Value;
+            _arrowTexture = ModContent.Request<Texture2D>("NPCFinder/Assets/Arrow", AssetRequestMode.ImmediateLoad).Value;
         }
 
         public override void Unload()
@@ -122,7 +122,7 @@ namespace FindMyNPCs.Core
             Vector2 arrowPos = screenCenter + offset * arrowDist;
 
             // Draw the arrow if not disabled by config.
-            if (!c.DisableArrow)
+            if (c.ShowArrow)
             {
                 sb.Draw(_arrowTexture, arrowPos, null, Color.White * finalAlpha, offset.ToRotation(), _arrowTexture.Size() / 2f, 1f, SpriteEffects.None, 0f);
             }

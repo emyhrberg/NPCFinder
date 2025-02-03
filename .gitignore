@@ -1,3 +1,4 @@
 # ignore folders
 /bin
 /obj
+/.vs

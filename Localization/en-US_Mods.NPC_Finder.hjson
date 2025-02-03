@@ -1,0 +1,26 @@
+Configs: {
+    Config: {
+        KeepShowingNPCAfterFound: {
+            Tooltip: If the player is within 10 tiles of the target, should the target continue to be tracked?
+            Label: Keep Showing Directions After NPC Is Found
+        }
+
+        DisableArrow: {
+            Tooltip: If enabled, this option will show an arrow that points in the direction of the NPC.
+            Label: Show Arrow
+        }
+
+        NPCNameFormat: {
+            Tooltip: How should the NPCs name be displayed? Full = 'Andrew the Guide', Given = 'Andrew', Type = 'Guide'
+            Label: Name Format
+        }
+
+        Headers.Config: Config Header
+        DisplayName: Config
+
+        ShowArrow: {
+            Tooltip: ""
+            Label: Show Arrow
+        }
+    }
+}

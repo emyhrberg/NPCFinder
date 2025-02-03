@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 using System;
 using System.Linq;
 
-namespace FindMyNPCs.Core
+namespace NPCFinder.Core
 {
     public class Commands : ModCommand
     {

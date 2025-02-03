@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Config;
 
-namespace FindMyNPCs.Core
+namespace NPCFinder.Core
 {
     public class Config : ModConfig
     {
@@ -19,12 +19,11 @@ namespace FindMyNPCs.Core
         [DrawTicks]
         [OptionStrings(["Full Name", "Given Name", "Type Name"])]
         [DefaultValue("Type Name")]
-        [Tooltip("How should the NPC name be displayed? Full = 'Andrew the Guide', Given = 'Andrew', Type = 'Guide'")]
+        [Tooltip("How should the NPCs name be displayed? Full = 'Andrew the Guide', Given = 'Andrew', Type = 'Guide'")]
         public string NPCNameFormat;
 
-        [DefaultValue(false)]
-        [Tooltip("Should the arrow be disabled?")]
-        public bool DisableArrow { get; set; }
+        [DefaultValue(true)]
+        public bool ShowArrow { get; set; }
 
         // If the player is within 10 tiles (approximately 10ft) of the NPC,
         // this option determines whether or not the target NPC should continue to be tracked.
